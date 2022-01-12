@@ -26,7 +26,9 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
-          body: file://result.html
+          # body: file://result.html
+          body: file://result.png
           to: 727040141@qq.com
           from: GitHub Actions
-          content_type: text/html
+          # content_type: text/html
+          content_type: image/png
