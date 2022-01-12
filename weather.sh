@@ -8,11 +8,11 @@ UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Ge
 
 curl \
   -H "Accept-Language: $LANGUAGE" \
-  -H "User-Agent: $UA" \
   -o result.png \
-  wttr.in/$CITY
+  wttr.in/$CITY.png
 
 
 # wttr.in/$CITY?format=4\&$UNIT
 
 #   -o result.html \
+#    -H "User-Agent: $UA" \
