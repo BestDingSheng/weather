@@ -3,7 +3,8 @@ name: 'GitHub Actions Weather Bot'
 on:
   push:
   schedule:
-  # 每天 6.30 执行任务
+      # 这里的时间是国际标准时间，需要 减去 16
+      # 每天 6.30 执行任务
     - cron: '30 6 * * *'
 
 jobs:
@@ -30,5 +31,11 @@ jobs:
           # body: file://result.png
           to: 727040141@qq.com
           from: GitHub Actions
-          content_type: text/html
+          content_type: html_body
+          attachments: file://result.png
           # content_type: image/png
+          # attachments: 
+          #   - 
+          #     filename: 'result.png'
+          #     path: 'file://result.png'
+          #     cid: 00000001
